@@ -3,13 +3,13 @@ const audioStateLine = document.querySelector('.audioplayer-line')
 const audioplayer = document.querySelector('.audioplayer')
 let audioTime = document.querySelector('.audioplayer-time>h1')
 const file = document.querySelector('#audio-file')
-const playImg = document.querySelector('.audioplayer-play>img')
+const playImgAudio = document.querySelector('.audioplayer-play>img')
 const volumeLine = document.querySelector('.audioplayer-volume')
 
 const volume = document.querySelector('.audioplayer-volume-line')
 const volumeState = document.querySelector('.audioplayer-volume-state')
 
-const play = document.querySelector('.audioplayer-play')
+const playAudio = document.querySelector('.audioplayer-play')
 let stateBool = false;
 let u = 0
 let audio
@@ -52,12 +52,12 @@ file.addEventListener('change', () => {
     document.querySelector('.audioplayer>h1').style.color = 'black'
 })
 
-play.addEventListener('click', () => {
+playAudio.addEventListener('click', () => {
     if (audio) {
         count++;
         if (count % 2 == 0) {
             audio.pause();
-            playImg.src = 'play.png'
+            playImgAudio.src = 'play.png'
         }
         else {
             audio.play();
@@ -66,10 +66,10 @@ play.addEventListener('click', () => {
                 audioState.style.width = `${percentAudio}%`
                 if (parseInt(window.getComputedStyle(audioState).getPropertyValue('width')) >= 900) {
                     audio.pause();
-                    playImg.src = 'play.png'
+                    playImgAudio.src = 'play.png'
                 }
             }, 100)
-            playImg.src = 'icons8-pause-24.png'
+            playImgAudio.src = 'icons8-pause-24.png'
         }
     }
     else {

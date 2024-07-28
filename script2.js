@@ -1,14 +1,18 @@
 const videoplayerLine = document.querySelector('.videoplayer-line')
 const video = document.createElement('video')
+video.setAttribute('width', 566)
+video.setAttribute('height', 360)
 const play = document.querySelector('.play')
 const playImg = document.querySelector('.play>img')
 const videoplayerState = document.querySelector('.videoplayer-line-state')
 const blockNone = document.querySelector('.block-none')
 let countPlay = 0
 let videoBool
-
 const videoplayerFile = document.querySelector('#video-file');
+const videoplayer = document.querySelector('.videoplayer')
+
 videoplayerFile.addEventListener('change', () => {
+    console.log('Видео загружено')
     const videoplayer = document.querySelector('.videoplayer')
     videoplayer.prepend(video)
     const v = URL.createObjectURL(videoplayerFile.files[0]);
@@ -70,12 +74,6 @@ video.addEventListener('mouseleave', () => {
     videoplayerLine.classList.remove('videoplayer-line-active');
     play.style.display = 'none';
 })
-
-
-
-
-
-
 
 videoplayerLine.addEventListener('mousemove', (e) => {
     if (videoBool) {
