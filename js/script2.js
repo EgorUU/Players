@@ -10,7 +10,7 @@ let countPlay = 0
 let videoBool
 const videoplayerFile = document.querySelector('#video-file');
 const videoplayer = document.querySelector('.videoplayer')
-
+videoplayerLine.style.display = 'none';
 videoplayerFile.addEventListener('change', () => {
     console.log('Видео загружено')
     const videoplayer = document.querySelector('.videoplayer')
@@ -18,6 +18,7 @@ videoplayerFile.addEventListener('change', () => {
     const v = URL.createObjectURL(videoplayerFile.files[0]);
     blockNone.style.display = 'none';
     video.src = v
+    videoplayerLine.style.display = 'block';
 });
 
 

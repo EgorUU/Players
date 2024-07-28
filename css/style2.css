@@ -4,7 +4,7 @@
     background-color: #2b8222;
     margin-top: 30px;
     position: relative;
-    top: -60px;
+    top: -80px;
     left: 34px;
     opacity: 0;
 }
@@ -39,18 +39,18 @@
 }
 @keyframes line {
     0% {
-        top: -50px;
+        top: -65px;
     }
     100% {
-        top: -60px;
+        top: -80px;
     }
 }
 @keyframes line2 {
     0% {
-        top: -60px;
+        top: -80px;
     }
     100% {
-        top: -50px;
+        top: -65px;
     }
 }
 video {
